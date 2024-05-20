@@ -13,10 +13,12 @@ import javax.swing.JOptionPane;
  * @author jabes
  */
 public class testeConexão {
-    try{
-        new ConnectionFactory().getConnection();
-        JOptionPane.showMessageDialog(null, "Conectado" );
-    } catch (SQLException e) {
-        JOptionPane.showMessageDialog(null, "erro" );
+    public static void main(String[] args) {
+        try {
+            new ConnectionFactory().getConnection();
+            JOptionPane.showMessageDialog(null, "Conectado!");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }
 }

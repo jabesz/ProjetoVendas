@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
+
+
 package telas;
+
+import com.formdev.flatlaf.FlatDarkLaf;
 
 /**
  *
@@ -28,6 +32,7 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        lblClose = new javax.swing.JLabel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -95,6 +100,16 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
         jLabel1.setText("Cadastro Clientes");
 
+        lblClose.setBackground(new java.awt.Color(255, 0, 0));
+        lblClose.setFont(new java.awt.Font("Liberation Sans", 1, 18)); // NOI18N
+        lblClose.setForeground(new java.awt.Color(255, 0, 0));
+        lblClose.setText("X");
+        lblClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lblCloseMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -102,22 +117,26 @@ public class CadastroClientes extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblClose)
+                .addGap(17, 17, 17))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(lblClose))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.setBackground(new java.awt.Color(0, 102, 255));
+        jTabbedPane1.setBackground(new java.awt.Color(102, 102, 102));
 
         jPanel3.setBackground(new java.awt.Color(51, 51, 51));
         jPanel3.setMaximumSize(new java.awt.Dimension(20000, 32767));
 
-        jPanel4.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
         jPanel4.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel15.setBackground(new java.awt.Color(255, 102, 102));
@@ -151,11 +170,11 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("RG");
 
-        jButton10.setBackground(new java.awt.Color(0, 102, 255));
+        jButton10.setBackground(new java.awt.Color(51, 51, 51));
         jButton10.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
         jButton10.setText("Pesquisar");
-        jButton10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton10.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 5, true));
         jButton10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton10ActionPerformed(evt);
@@ -196,7 +215,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         jLabel27.setForeground(new java.awt.Color(255, 255, 255));
         jLabel27.setText("Celular");
 
-        jTextField10.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField10.setBackground(new java.awt.Color(102, 102, 102));
         jTextField10.setBorder(null);
         jTextField10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -204,13 +223,13 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jTextField11.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField11.setBackground(new java.awt.Color(102, 102, 102));
         jTextField11.setBorder(null);
 
-        jTextField12.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField12.setBackground(new java.awt.Color(102, 102, 102));
         jTextField12.setBorder(null);
 
-        jFormattedTextField4.setBackground(new java.awt.Color(0, 102, 255));
+        jFormattedTextField4.setBackground(new java.awt.Color(102, 102, 102));
         jFormattedTextField4.setBorder(null);
         try {
             jFormattedTextField4.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("#####-###")));
@@ -218,7 +237,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        jFormattedTextField5.setBackground(new java.awt.Color(0, 102, 255));
+        jFormattedTextField5.setBackground(new java.awt.Color(102, 102, 102));
         jFormattedTextField5.setBorder(null);
         try {
             jFormattedTextField5.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("###.###.###-##")));
@@ -231,7 +250,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jFormattedTextField6.setBackground(new java.awt.Color(0, 102, 255));
+        jFormattedTextField6.setBackground(new java.awt.Color(102, 102, 102));
         jFormattedTextField6.setBorder(null);
         try {
             jFormattedTextField6.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("(##) 9 ####-####")));
@@ -239,13 +258,13 @@ public class CadastroClientes extends javax.swing.JFrame {
             ex.printStackTrace();
         }
 
-        jComboBox2.setBackground(new java.awt.Color(0, 102, 255));
+        jComboBox2.setBackground(new java.awt.Color(51, 51, 51));
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jTextField13.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField13.setBackground(new java.awt.Color(102, 102, 102));
         jTextField13.setBorder(null);
 
-        jTextField14.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField14.setBackground(new java.awt.Color(102, 102, 102));
         jTextField14.setBorder(null);
         jTextField14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -253,13 +272,13 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jTextField15.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField15.setBackground(new java.awt.Color(102, 102, 102));
         jTextField15.setBorder(null);
 
-        jTextField16.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField16.setBackground(new java.awt.Color(102, 102, 102));
         jTextField16.setBorder(null);
 
-        jTextField17.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField17.setBackground(new java.awt.Color(102, 102, 102));
         jTextField17.setBorder(null);
         jTextField17.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,7 +286,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jTextField18.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField18.setBackground(new java.awt.Color(102, 102, 102));
         jTextField18.setBorder(null);
 
         jSeparator1.setBackground(new java.awt.Color(255, 255, 255));
@@ -294,44 +313,44 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jSeparator12.setBackground(new java.awt.Color(255, 255, 255));
 
-        jButton11.setBackground(new java.awt.Color(0, 102, 255));
+        jButton11.setBackground(new java.awt.Color(51, 51, 51));
         jButton11.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
         jButton11.setText("+ Novo");
-        jButton11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton11.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 5, true));
         jButton11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton11ActionPerformed(evt);
             }
         });
 
-        jButton12.setBackground(new java.awt.Color(0, 102, 255));
+        jButton12.setBackground(new java.awt.Color(51, 51, 51));
         jButton12.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton12.setForeground(new java.awt.Color(255, 255, 255));
         jButton12.setText("Salvar");
-        jButton12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton12.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 5, true));
         jButton12.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton12ActionPerformed(evt);
             }
         });
 
-        jButton13.setBackground(new java.awt.Color(0, 102, 255));
+        jButton13.setBackground(new java.awt.Color(51, 51, 51));
         jButton13.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton13.setForeground(new java.awt.Color(255, 255, 255));
         jButton13.setText("Editar");
-        jButton13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton13.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 5, true));
         jButton13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton13ActionPerformed(evt);
             }
         });
 
-        jButton14.setBackground(new java.awt.Color(0, 102, 255));
+        jButton14.setBackground(new java.awt.Color(51, 51, 51));
         jButton14.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton14.setForeground(new java.awt.Color(255, 255, 255));
         jButton14.setText("Excluir");
-        jButton14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jButton14.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(51, 51, 51), 5, true));
         jButton14.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton14ActionPerformed(evt);
@@ -407,14 +426,14 @@ public class CadastroClientes extends javax.swing.JFrame {
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                             .addComponent(jSeparator11)
-                                            .addComponent(jTextField16, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE)))
+                                            .addComponent(jTextField16, javax.swing.GroupLayout.PREFERRED_SIZE, 56, Short.MAX_VALUE)))
                                     .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel15)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jSeparator1)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.DEFAULT_SIZE, 56, Short.MAX_VALUE))
+                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 56, Short.MAX_VALUE))
                                 .addGap(48, 48, 48)
                                 .addComponent(jLabel22)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -428,7 +447,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                                     .addComponent(jSeparator2)
                                     .addComponent(jTextField11, javax.swing.GroupLayout.DEFAULT_SIZE, 249, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel4Layout.createSequentialGroup()
                                 .addComponent(jLabel17)
                                 .addGap(10, 10, 10)
@@ -531,7 +550,7 @@ public class CadastroClientes extends javax.swing.JFrame {
                     .addComponent(jButton12)
                     .addComponent(jButton13)
                     .addComponent(jButton14))
-                .addContainerGap(37, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -553,12 +572,12 @@ public class CadastroClientes extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Dados Pessoais", jPanel3);
 
-        jPanel5.setBackground(new java.awt.Color(0, 102, 255));
+        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
         jPanel5.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel2.setText("Nome");
 
-        jButton15.setBackground(new java.awt.Color(0, 102, 255));
+        jButton15.setBackground(new java.awt.Color(51, 51, 51));
         jButton15.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton15.setForeground(new java.awt.Color(255, 255, 255));
         jButton15.setText("Pesquisar");
@@ -569,7 +588,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jTextField19.setBackground(new java.awt.Color(0, 102, 255));
+        jTextField19.setBackground(new java.awt.Color(102, 102, 102));
         jTextField19.setBorder(null);
         jTextField19.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -604,7 +623,7 @@ public class CadastroClientes extends javax.swing.JFrame {
         jTable1.setSelectionForeground(new java.awt.Color(51, 51, 51));
         jScrollPane1.setViewportView(jTable1);
 
-        jButton16.setBackground(new java.awt.Color(0, 102, 255));
+        jButton16.setBackground(new java.awt.Color(51, 51, 51));
         jButton16.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton16.setForeground(new java.awt.Color(255, 255, 255));
         jButton16.setText("+ Novo");
@@ -615,7 +634,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jButton17.setBackground(new java.awt.Color(0, 102, 255));
+        jButton17.setBackground(new java.awt.Color(51, 51, 51));
         jButton17.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton17.setForeground(new java.awt.Color(255, 255, 255));
         jButton17.setText("Salvar");
@@ -626,7 +645,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jButton18.setBackground(new java.awt.Color(0, 102, 255));
+        jButton18.setBackground(new java.awt.Color(51, 51, 51));
         jButton18.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton18.setForeground(new java.awt.Color(255, 255, 255));
         jButton18.setText("Editar");
@@ -637,7 +656,7 @@ public class CadastroClientes extends javax.swing.JFrame {
             }
         });
 
-        jButton19.setBackground(new java.awt.Color(0, 102, 255));
+        jButton19.setBackground(new java.awt.Color(51, 51, 51));
         jButton19.setFont(new java.awt.Font("Dialog", 0, 14)); // NOI18N
         jButton19.setForeground(new java.awt.Color(255, 255, 255));
         jButton19.setText("Excluir");
@@ -796,18 +815,28 @@ public class CadastroClientes extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton19ActionPerformed
 
+    private void lblCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCloseMouseClicked
+       System.exit(0);
+    }//GEN-LAST:event_lblCloseMouseClicked
+
     /**
      * @param args the command line arguments
      */
+    
+
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
+        
+          FlatDarkLaf.setup();
+        
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("FlatDarkLaf".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -892,5 +921,6 @@ public class CadastroClientes extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField17;
     private javax.swing.JTextField jTextField18;
     private javax.swing.JTextField jTextField19;
+    private javax.swing.JLabel lblClose;
     // End of variables declaration//GEN-END:variables
 }

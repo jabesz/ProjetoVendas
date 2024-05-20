@@ -56,6 +56,8 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
+                  <Component id="lblClose" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -63,7 +65,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblClose" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -78,12 +83,29 @@
             <Property name="text" type="java.lang.String" value="Cadastro Clientes"/>
           </Properties>
         </Component>
+        <Component class="javax.swing.JLabel" name="lblClose">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="ff" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Liberation Sans" size="18" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="0" green="0" red="ff" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="X"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lblCloseMouseClicked"/>
+          </Events>
+        </Component>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JTabbedPane" name="jTabbedPane1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="ff" green="66" red="0" type="rgb"/>
+          <Color blue="66" green="66" red="66" type="rgb"/>
         </Property>
       </Properties>
 
@@ -130,7 +152,7 @@
             <Container class="javax.swing.JPanel" name="jPanel4">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="66" red="0" type="rgb"/>
+                  <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -251,7 +273,7 @@
                                               <Component id="jTextField11" pref="249" max="32767" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="jButton10" min="-2" pref="75" max="-2" attributes="0"/>
+                                          <Component id="jButton10" min="-2" pref="86" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
@@ -383,7 +405,7 @@
                               <Component id="jButton13" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jButton14" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="37" max="32767" attributes="0"/>
+                          <EmptySpace pref="22" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -479,7 +501,7 @@
                 <Component class="javax.swing.JButton" name="jButton10">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -490,8 +512,8 @@
                     <Property name="text" type="java.lang.String" value="Pesquisar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                        <LineBorder roundedCorners="true" thickness="5">
+                          <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -598,7 +620,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField10">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -611,7 +633,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField11">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -621,7 +643,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField12">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -631,7 +653,7 @@
                 <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField4">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -644,7 +666,7 @@
                 <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField5">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -660,7 +682,7 @@
                 <Component class="javax.swing.JFormattedTextField" name="jFormattedTextField6">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -673,7 +695,7 @@
                 <Component class="javax.swing.JComboBox" name="jComboBox2">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                       <StringArray count="4">
@@ -691,7 +713,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField13">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -701,7 +723,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField14">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -714,7 +736,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField15">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -724,7 +746,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField16">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -734,7 +756,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField17">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -747,7 +769,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField18">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -841,7 +863,7 @@
                 <Component class="javax.swing.JButton" name="jButton11">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -852,8 +874,8 @@
                     <Property name="text" type="java.lang.String" value="+ Novo"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                        <LineBorder roundedCorners="true" thickness="5">
+                          <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -865,7 +887,7 @@
                 <Component class="javax.swing.JButton" name="jButton12">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -876,8 +898,8 @@
                     <Property name="text" type="java.lang.String" value="Salvar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                        <LineBorder roundedCorners="true" thickness="5">
+                          <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -889,7 +911,7 @@
                 <Component class="javax.swing.JButton" name="jButton13">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -900,8 +922,8 @@
                     <Property name="text" type="java.lang.String" value="Editar"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                        <LineBorder roundedCorners="true" thickness="5">
+                          <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -913,7 +935,7 @@
                 <Component class="javax.swing.JButton" name="jButton14">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -924,8 +946,8 @@
                     <Property name="text" type="java.lang.String" value="Excluir"/>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                        <LineBorder>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                        <LineBorder roundedCorners="true" thickness="5">
+                          <Color PropertyName="color" blue="33" green="33" red="33" type="rgb"/>
                         </LineBorder>
                       </Border>
                     </Property>
@@ -971,7 +993,7 @@
             <Container class="javax.swing.JPanel" name="jPanel5">
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="66" red="0" type="rgb"/>
+                  <Color blue="66" green="66" red="66" type="rgb"/>
                 </Property>
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="0" green="0" red="0" type="rgb"/>
@@ -1048,7 +1070,7 @@
                 <Component class="javax.swing.JButton" name="jButton15">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -1072,7 +1094,7 @@
                 <Component class="javax.swing.JTextField" name="jTextField19">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="66" green="66" red="66" type="rgb"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                       <Border info="null"/>
@@ -1200,7 +1222,7 @@
                 <Component class="javax.swing.JButton" name="jButton16">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -1224,7 +1246,7 @@
                 <Component class="javax.swing.JButton" name="jButton17">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -1248,7 +1270,7 @@
                 <Component class="javax.swing.JButton" name="jButton18">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
@@ -1272,7 +1294,7 @@
                 <Component class="javax.swing.JButton" name="jButton19">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="66" red="0" type="rgb"/>
+                      <Color blue="33" green="33" red="33" type="rgb"/>
                     </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Dialog" size="14" style="0"/>
