@@ -19,6 +19,7 @@ public class testeConexão {
             JOptionPane.showMessageDialog(null, "Conectado!");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
+            
         }
     }
 }
