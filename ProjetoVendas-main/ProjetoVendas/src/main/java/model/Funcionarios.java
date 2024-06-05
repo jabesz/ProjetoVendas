@@ -15,11 +15,11 @@ public class Funcionarios {
     private String complemento;
     private String bairro;
     private String cidade;
-    private String uf;   
+    private String uf;
     private String senha;
     private String nivelAcesso;
     private String cargo;
- 
+
     //Getters e Setters
     public int getId() {
         return id;

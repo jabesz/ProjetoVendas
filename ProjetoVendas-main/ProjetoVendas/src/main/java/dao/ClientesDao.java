@@ -1,5 +1,8 @@
 package dao;
 
+import com.github.gilbertotorrezan.viacep.se.ViaCEPClient;
+import com.github.gilbertotorrezan.viacep.shared.ViaCEPEndereco;
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -15,34 +18,36 @@ import model.Clientes;
  * @author jabes
  */
 public class ClientesDao {
-private Connection con;
+private Connection connection;
 
     public ClientesDao() {
-        try {
-            this.con = new ConnectionFactory().getConnection();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        this.connection = new ConnectionFactory().getConnection();
+        if (this.connection == null) {
+        System.err.println("Failed to establish database connection!");
+    } else {
+        System.out.println("Database connection established successfully.");
+    }
     }
 
     public void cadastraClientes(Clientes obj) {
         try {
-            String sql = "insert into tb_clientes (nome, rg, cpf, email, celular, cep, endereco, numero, complemento, bairro, cidade, estado) "
-                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            String sql = "insert into tb_clientes (nome, rg, cpf, email, celular, telefone, cep, endereco, numero, complemento, bairro, cidade, estado) "
+                    + "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
 
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, obj.getNome());
             ps.setString(2, obj.getRg());
             ps.setString(3, obj.getCpf());
             ps.setString(4, obj.getEmail());
-            ps.setString(5, obj.getCelular());
-            ps.setString(6, obj.getCep());
-            ps.setString(7, obj.getEndereco());
-            ps.setInt(8, obj.getNumero());
-            ps.setString(9, obj.getComplemento());
-            ps.setString(10, obj.getBairro());
-            ps.setString(11, obj.getCidade());
-            ps.setString(12, obj.getUf());
+            ps.setString(5, obj.getTelefone());
+            ps.setString(6, obj.getCelular());
+            ps.setString(7, obj.getCep());
+            ps.setString(8, obj.getEndereco());
+            ps.setInt(9, obj.getNumero());
+            ps.setString(10, obj.getComplemento());
+            ps.setString(11, obj.getBairro());
+            ps.setString(12, obj.getCidade());
+            ps.setString(13, obj.getUf());
 
             ps.execute();
             ps.close();
@@ -57,14 +62,15 @@ private Connection con;
     public void alterarCliente(Clientes obj) {
         try {
 
-            String sql = "update tb_clientes set  nome=?, rg=?, cpf=?, email=?, celular=?, cep=?, "
+            String sql = "update tb_clientes set  nome=?, rg=?, cpf=?, email=?, telefone=? ,celular=?, cep=?, "
                     + "endereco=?, numero=?,complemento=?,bairro=?,cidade=?, estado=?  where id =?";
 
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, obj.getNome());
             ps.setString(2, obj.getRg());
             ps.setString(3, obj.getCpf());
             ps.setString(4, obj.getEmail());
+            ps.setString(5, obj.getTelefone());
             ps.setString(6, obj.getCelular());
             ps.setString(7, obj.getCep());
             ps.setString(8, obj.getEndereco());
@@ -92,7 +98,7 @@ private Connection con;
 
             String sql = "delete from tb_clientes where id = ?";
 
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setInt(1, obj.getId());
 
             ps.execute();
@@ -113,7 +119,7 @@ private Connection con;
             List<Clientes> lista = new ArrayList<>();
 
             String sql = "select * from tb_clientes";
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
 
             while (rs.next()) {
@@ -150,7 +156,7 @@ private Connection con;
     public Clientes consultaPorNome(String nome) {
         try {
             String sql = "select * from tb_clientes where nome = ?";
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, nome);
 
             ResultSet rs = ps.executeQuery();
@@ -163,6 +169,7 @@ private Connection con;
                 obj.setRg(rs.getString("rg"));
                 obj.setCpf(rs.getString("cpf"));
                 obj.setEmail(rs.getString("email"));
+                obj.setTelefone(rs.getString("telefone"));
                 obj.setCelular(rs.getString("celular"));
                 obj.setCep(rs.getString("cep"));
                 obj.setEndereco(rs.getString("endereco"));
@@ -184,7 +191,7 @@ private Connection con;
     public Clientes buscaporcpf(String cpf) {
         try {
             String sql = "select * from tb_clientes where cpf = ?";
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, cpf);
 
             ResultSet rs = ps.executeQuery();
@@ -197,6 +204,7 @@ private Connection con;
                 obj.setRg(rs.getString("rg"));
                 obj.setCpf(rs.getString("cpf"));
                 obj.setEmail(rs.getString("email"));
+                obj.setTelefone(rs.getString("telefone"));
                 obj.setCelular(rs.getString("celular"));
                 obj.setCep(rs.getString("cep"));
                 obj.setEndereco(rs.getString("endereco"));
@@ -224,7 +232,7 @@ private Connection con;
             List<Clientes> lista = new ArrayList<>();
 
             String sql = "select * from tb_clientes where nome like ?";
-            PreparedStatement ps = con.prepareStatement(sql);
+            PreparedStatement ps = connection.prepareStatement(sql);
             ps.setString(1, nome);
 
             ResultSet rs = ps.executeQuery();
@@ -237,6 +245,7 @@ private Connection con;
                 obj.setRg(rs.getString("rg"));
                 obj.setCpf(rs.getString("cpf"));
                 obj.setEmail(rs.getString("email"));
+                obj.setTelefone(rs.getString("telefone"));
                 obj.setCelular(rs.getString("celular"));
                 obj.setCep(rs.getString("cep"));
                 obj.setEndereco(rs.getString("endereco"));
@@ -256,6 +265,21 @@ private Connection con;
             JOptionPane.showMessageDialog(null, "Erro :" + erro);
             return null;
         }
+    }
+    
+    public Clientes buscaCep(String cep) throws IOException {
+
+        ViaCEPClient client = new ViaCEPClient();
+        ViaCEPEndereco endereco = client.getEndereco(cep);
+        
+               
+        Clientes obj = new Clientes();
+        
+        obj.setEndereco(endereco.getLogradouro());
+        obj.setCidade(endereco.getLocalidade());
+        obj.setBairro(endereco.getBairro());
+        obj.setUf(endereco.getUf());
+        return obj;
     }
 
 }
